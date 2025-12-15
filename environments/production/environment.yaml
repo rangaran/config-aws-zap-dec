@@ -15,7 +15,11 @@ app:
   #  artifactId: ferret
   #  version: "1.2"
   #  type: war
-
+  services:
+    - amazonCloudWatch:
+        arn: arn:aws:iam::592157396942:role/IBM_EASeJ_Service_20251014-0723-2300-40bd-d5ad7c120a52
+        logGroup: EASeJ
+        
   # Set minimum and maximum number of instances of the application. 
   # If the minimum and maximum values are different, the service scales the
   # instances up and down based on the CPU utilization.
